@@ -31,7 +31,7 @@ const Hero = () => {
           <Button content={'get involved'} btnStyle={'text-[#453838] before:bg-[#0f172a] hover:text-white hover:border-white'}/>
         </div>
         {/* images */}
-        <div className={`${ isScrolled ? 'slide-in-bottom' : 'hidden' } flex mt-[100px] gap-x-[20px] h-[410px] w-[872px]`}>
+        <div className={`${ isScrolled ? 'slide-in-bottom' : '' } flex mt-[100px] gap-x-[20px] h-[410px] w-[872px]`}>
           <img src={image1} alt="Group photo with students" className='object-cover w-[245px] rounded-[20px] mb-[20px] hover:scale-110 transition duration-300' />
           <img src={image2} alt="A boy with a laptop" className='object-cover w-[245px] mt-[25px] rounded-[20px] hover:scale-110 transition duration-300' />
           <img src={image3} alt="Group photo with female locals" className='object-cover w-[245px] rounded-[20px] mb-[20px] hover:scale-110 transition duration-300' />

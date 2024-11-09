@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import images
 import image1 from '/assets/recent-causes-img-1.png';
 import image2 from '/assets/recent-causes-img-2.png';
@@ -7,6 +7,14 @@ import image4 from '/assets/recent-causes-img-4.png';
 import Button from '../../components/Button'
 
 const RecentCauses = () => {
+  const data = [
+    {id: 1, img:image1, title: "Safe Net Ambassador's Program", description: "Teaching Jss1 student in Jigawa state to be safe online users and avoid potential cyber"},
+    {id: 2, img:image2, title: "Baby Bello’s Journey", description: "See the transformation of baby Bello from  malnourishment to a healthy baby",},
+    {id: 3, img:image3, title: "Baby Grace", description: "After a tragedy of unwanted pregnancy baby grace was brought into the world of pain",},
+    {id: 4, img:image4, title: "Flood Relief", description: "In a collaborative effort to reach out to flood victims in Ringim, Jigawa State",}
+  ];
+
+
   return (
     <div className='flex justify-center items-center flex-col p-[100px]'>
       {/* subtitle */}
@@ -15,34 +23,17 @@ const RecentCauses = () => {
       <h3 className='text-[56px] font-extrabold capitalize text-[#0F172A]'>our most recent causes</h3>
       {/* grid box */}
       <div className='grid grid-cols-2 grid-rows-2 mt-[50px] gap-[100px]'>
-        {/* first box */}
-        <div>
-          <img src={image1} alt="" />
-          <h3 className='font-extrabold text-[32px] text-[#0F172A] my-[10px]'>Safe Net Ambassador's Program</h3>
-          <p className='text-[18px] mb-[25px]'>Teaching Jss1 student in Jigawa state to be safe online users and avoid potential cyber ...</p>
-          <Button content={'Learn More'} btnStyle={'bg-[#336699] text-white before:bg-[#0f172a] hover:border-white'}/>
-        </div>
-        {/* second box */}
-        <div>
-          <img src={image2} alt="" className='' />
-          <h3 className='font-extrabold text-[32px] text-[#0F172A] my-[10px]'>Baby Bello’s Journey</h3>
-          <p className='text-[18px] mb-[25px]'>See the transformation of baby Bello from  malnourishment to a healthy baby ...</p>
-          <Button content={'Learn More'} btnStyle={'bg-[#336699] text-white before:bg-[#0f172a] hover:border-white'}/>
-        </div>
-        {/* third box */}
-        <div>
-          <img src={image3} alt="" />
-          <h3 className='font-extrabold text-[32px] text-[#0F172A] my-[10px]'>Baby Grace</h3>
-          <p className='text-[18px] mb-[25px]'>After a tragedy of unwanted pregnancy baby grace was brought into the world of pain ...</p>
-          <Button content={'Learn More'} btnStyle={'bg-[#336699] text-white before:bg-[#0f172a] hover:border-white'}/>
-        </div>
-        {/* fourth box */}
-        <div>
-          <img src={image4} alt="" />
-          <h3 className='font-extrabold text-[32px] text-[#0F172A] my-[10px]'>Flood Relief</h3>
-          <p className='text-[18px] mb-[25px]'>In a collaborative effort to reach out to flood victims in Ringim, Jigawa State ...</p>
-          <Button content={'Learn More'} btnStyle={'bg-[#336699] text-white before:bg-[#0f172a] hover:border-white'}/>
-        </div>
+        {data.map(card => {
+          return (
+            <div>
+              <img src={card.img} alt={`Image ${card.id}`} />
+              <h3 className='font-extrabold text-[32px] text-[#0F172A] my-[10px]'>{card.title}</h3>
+              <span className='text-[18px] mb-[25px]'>{card.description + ' ...'}</span>
+              {/* <span onClick={() => toggleText()} className='hover:cursor-pointer'> {isFullTextShown ? 'Less' : 'More'}</span> */}
+              <Button content={'Learn More'} btnStyle={'bg-[#336699] text-white before:bg-[#0f172a] hover:border-white mt-4'}/>
+            </div>
+          )
+        })}
       </div>
     </div>
   )
