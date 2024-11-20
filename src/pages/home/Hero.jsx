@@ -32,10 +32,10 @@ const Hero = () => {
         </div>
         {/* images */}
         <div className={`${ isScrolled ? 'slide-in-bottom' : '' } flex mt-[100px] gap-x-[20px] h-[410px] w-[872px]`}>
-          <img src={image1} alt="Group photo with students" className='object-cover w-[245px] rounded-[20px] mb-[20px] hover:scale-110 transition duration-300' />
-          <img src={image2} alt="A boy with a laptop" className='object-cover w-[245px] mt-[25px] rounded-[20px] hover:scale-110 transition duration-300' />
-          <img src={image3} alt="Group photo with female locals" className='object-cover w-[245px] rounded-[20px] mb-[20px] hover:scale-110 transition duration-300' />
-          <img src={image4} alt="Two kids writing and studying" className='object-cover w-[245px] mt-[25px] rounded-[20px] hover:scale-110 transition duration-300' />
+          <img src={image1} alt="Group photo with students" className='object-cover w-[245px] rounded-[20px] mb-[20px] hover:scale-110 transition duration-300 hover:cursor-cell' />
+          <img src={image2} alt="A boy with a laptop" className='object-cover w-[245px] mt-[25px] rounded-[20px] hover:scale-110 transition duration-300 hover:cursor-cell' />
+          <img src={image3} alt="Group photo with female locals" className='object-cover w-[245px] rounded-[20px] mb-[20px] hover:scale-110 transition duration-300 hover:cursor-cell' />
+          <img src={image4} alt="Two kids writing and studying" className='object-cover w-[245px] mt-[25px] rounded-[20px] hover:scale-110 transition duration-300 hover:cursor-cell' />
         </div>
       </div>
     </div>

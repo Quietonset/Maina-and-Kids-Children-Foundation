@@ -22,6 +22,7 @@ export default {
         moul: ['Moul', 'sans-serif'],
         kumbh: ['Kumbh Sans', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
     },
   },
