@@ -16,7 +16,8 @@ export const MenuProvider = ({ children }) => {
 
     const toggleMenu = () => {
         setIsActive(!isActive)
-    }
+    };
+
     return (
         <MenuContext.Provider value={{ isClicked, setIsClicked, handleMenuClose, isActive, toggleMenu }}>
             { children }

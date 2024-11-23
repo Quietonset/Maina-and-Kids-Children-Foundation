@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 // import icons
 import { FaYoutube, FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 // import footer image
 import image from '/assets/Logo-colored.png'
+// import anniversary context
+import { AnniversaryContext } from '../context/AnniversaryContext';
 
 const Footer = () => {
+  const { isTextShown } = useContext(AnniversaryContext);
+
   return (
-    <footer className='bg-[#fafafa] text-[#453838] s:px-[20px] sm:px-[25px] md:px-[40px] lg:px-[60px] xl:px-[70px] capitalize'>
+    // setting margin bottom based on the informative text at bottom
+    <footer className={`${isTextShown ? 'mb-10' : 'mb-0'} bg-[#fafafa] text-[#453838] s:px-[20px] sm:px-[25px] md:px-[40px] lg:px-[60px] xl:px-[70px] capitalize`}>
         {/* columns */}
         <div className='md:h-[320px] lg:h-[322px] xl:h-[322px] grid s:grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 py-[48px] gap-[48px]'>
           <div className='flex flex-col gap-[25px]'>

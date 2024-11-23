@@ -24,8 +24,22 @@ export default {
         montserrat: ['Montserrat', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
       },
+      scrollbarWidth: {
+        none: 'none'
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities(
+        {
+          '.scrollbar-none': {
+            scrollbarWidth: 'none'
+          },
+        },
+        ['responsive', 'hover']
+      )
+    }
+  ],
 }
 
