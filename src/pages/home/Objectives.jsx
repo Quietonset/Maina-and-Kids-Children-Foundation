@@ -11,7 +11,7 @@ const Objectives = () => {
       {/* subtitle */}
       <p className='text-[#336699] font-semibold text-xl capitalize font-montserrat'>objectives</p>
       {/* bigger text */}
-      <h3 className='text-[56px] font-extrabold text-[0F172A]'>Giving Little Children Chances Through</h3>
+      <h3 className='text-[56px] font-extrabold text-[#0F172A]'>Giving Little Children Chances Through</h3>
       {/* grid box */}
       <div className='grid grid-cols-2 grid-rows-2 gap-[95px] mt-[50px]'>
         {/* first box */}
