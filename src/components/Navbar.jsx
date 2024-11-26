@@ -5,6 +5,7 @@ import Logo from '/assets/IMG-20221031-WA0024 1.png';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { MenuContext } from '../context/MenuContext';
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   // getting states from menu context
@@ -39,7 +40,7 @@ const Navbar = () => {
   });
   return (
     // based on how far a user is in a page, the navbar changes
-    <nav className={`${isScrolled ? 'bg-white' : navbarBg } transition-all duration-300 h-[129px] flex justify-between items-center s:px-[5px] sm:px-[20px] md:px-[60px] lg:px-[80px] xl:px-[100px] sticky top-0 z-10`}>
+    <nav className={`${isScrolled ? 'bg-white' : navbarBg } transition-all duration-300 h-[120px] flex justify-between items-center s:px-[5px] sm:px-[20px] md:px-[60px] lg:px-[80px] xl:px-[100px] 2xl:px-[100px] sticky top-0 z-10`}>
       {/* image */}
       <div>
         <img src={ Logo } alt="Maina and Kids Foundation" className={`${isActive ? 'hidden' : 'block'} s:w-[50px] s:h-[50px] sm:w-[65px] s:h-[65px] md:w-[75px] md:h-[75px] lg:w-[80px] lg:h-[80px] xl:w-[90px] xl:h-[90px] object-cover`} />
@@ -59,18 +60,28 @@ const Navbar = () => {
         >
           <span>causes</span>
           <span>{isDropdownHovered ? <IoIosArrowUp/> : <IoIosArrowDown/> }</span>
+          {isDropdownHovered && (
+            <div className='absolute top-10 bg-white text-gray-600 rounded-lg h-fit w-[150px] p-5 shadow-lg md:text-sm'>
+              <ul>
+                <li className='hover:cursor-pointer hover:text-[#453838] border-b py-1.5'>
+                  <Link to='objectives' smooth={true}>objectives</Link>
+                </li>
+                <li className='hover:cursor-pointer hover:text-[#453838] border-b py-1.5'>
+                  <Link to='portfolio' smooth={true}>portfolio</Link>
+                </li>
+                <li className='hover:cursor-pointer hover:text-[#453838] border-b py-1.5'>
+                  <Link to='recentCauses' smooth={true}>recent causes</Link>
+                </li>
+                <li className='hover:cursor-pointer hover:text-[#453838] border-b py-1.5'>
+                  <Link to='team' smooth={true}>our team</Link>
+                </li>
+                <li className='hover:cursor-pointer hover:text-[#453838] border-b py-1.5'>
+                  <Link>donate</Link>
+                </li>
+              </ul>
+            </div>
+          )}
         </li>
-        {isDropdownHovered && (
-          <div className='absolute top-24 bg-white rounded-md h-[200px] w-[450px]'>
-            <ul>
-              <li>objectives</li>
-              <li>recent causes</li>
-              <li>portfolio</li>
-              <li>our team</li>
-              <li>donate</li>
-            </ul>
-          </div>
-        )}
         <li
         onClick={() => navigate('/about')}
         className={`${location.pathname === '/about' ? 'text-gray-800' : 'text-gray-400'} hover:cursor-pointer`}

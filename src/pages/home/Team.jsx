@@ -9,42 +9,67 @@ import speaker6 from '/assets/speaker6.png';
 
 
 const Team = () => {
+  const data = [
+    {
+      id: 1,
+      image: speaker1,
+      speakerName: 'Maina Gambo Bawa',
+      speakerPosition: 'Founder, Executive Director'
+
+    },
+    {
+      id: 2,
+      image: speaker2,
+      speakerName: 'Afolabi Joshua Voja',
+      speakerPosition: 'Program Director'
+
+    },
+    {
+      id: 3,
+      image: speaker3,
+      speakerName: 'Sadeeq A. Nuru',
+      speakerPosition: 'Finance Manager'
+
+    },
+    {
+      id: 4,
+      image: speaker4,
+      speakerName: 'Ugwu Princess-Chiamaka Debora',
+      speakerPosition: 'Project Manager'
+
+    },
+    {
+      id: 5,
+      image: speaker5,
+      speakerName: 'Benjamin Peter',
+      speakerPosition: 'Human Resource & Development Manager '
+
+    },
+    {
+      id: 6,
+      image: speaker6,
+      speakerName: 'Isaac Ololade Kayode',
+      speakerPosition: 'Monitoring & Evaluation Officer'
+
+    }
+  ]
   return (
-    <div className='flex justify-center items-center flex-col p-[100px]'>
+    <div id='team' className='flex justify-center items-center flex-col xl:p-[100px]'>
       {/* heading */}
-      <h3 className='text-[56px] font-extrabold text-[#0F172A]'>Meet the team</h3>
+      <h3 className='sm:text-[30px] sm:text-center sm:whitespace-nowrap md:text-[55px] md:text-center text-[56px] font-extrabold text-[#0F172A]'>Meet the team</h3>
+      {/* sub text only on mobile */}
+      <p className='hidden sm:block text-center text-[#0F172A]'>A dedicated team  committed to making positive impact in the lives of children.</p>
       {/* grid box */}
-      <div className='grid grid-cols-3 grid-rows-2 gap-[54px] mt-[80px]'>
-        <div className='w-[229px] h-[215px] flex flex-col justify-center items-center gap-[10px]'>
-          <img src={ speaker1 } alt="" />
-          <p className='text-center text-lg'>Maina Gambo Bawa</p>
-          <p className='text-center text-[#0f172a]'>Founder, Executive Director</p>
-        </div>
-        <div className='w-[229px] h-[215px] flex flex-col justify-center items-center gap-[10px]'>
-          <img src={ speaker2 } alt="" />
-          <p className='text-center text-lg'>Afolabi Joshua Voja</p>
-          <p className='text-center text-[#0f172a]'>Program Director</p>
-        </div>
-        <div className='w-[229px] h-[215px] flex flex-col justify-center items-center gap-[10px]'>
-          <img src={ speaker3 } alt="" />
-          <p className='text-center text-lg'>Sadeeq A. Nuru</p>
-          <p className='text-center text-[#0f172a]'>Finance Manager</p>
-        </div>
-        <div className='w-[229px] h-[215px] flex flex-col justify-center items-center gap-[10px]'>
-          <img src={ speaker4 } alt="" />
-          <p className='text-center text-lg'>Ugwu Princess-Chiamaka Debora</p>
-          <p className='text-center text-[#0f172a]'>Project Manager</p>
-        </div>
-        <div className='w-[229px] h-[215px] flex flex-col justify-center items-center gap-[10px]'>
-          <img src={ speaker5 } alt="" />
-          <p className='text-center text-lg'>Benjamin Peter</p>
-          <p className='text-center text-[#0f172a]'>Human Resource & Development Manager </p>
-        </div>
-        <div className='w-[229px] h-[215px] flex flex-col justify-center items-center gap-[10px]'>
-          <img src={ speaker6 } alt="" />
-          <p className='text-center text-lg'>Isaac Ololade Kayode</p>
-          <p className='text-center text-[#0f172a]'>Monitoring & Evaluation Officer</p>
-        </div>
+      <div className='grid sm:grid-cols-2 sm:grid-rows-3 sm:gap-2 grid-cols-3 grid-rows-2 md:gap-[40px] lg:gap-[50px] xl:gap-[54px] 2xl:gap-[60px] sm:mt-[50px] md:mt-[60px] lg:mt-[70px] xl:mt-[80px] 2xl:mt-[100px] sm:mb-10 md:mb-14 md:mx-3'>
+        {data.map((person) => {
+            return (
+              <div className='sm:w-[180px] w-[229px] h-[215px] flex flex-col justify-center items-center gap-[10px]' key={person.id}>
+                <img src={ person.image } alt="" className='sm:h-[100px] sm:w-[100px]' />
+                <p className='text-center sm:text-sm text-lg'>{ person.speakerName }</p>
+                <p className='text-center sm:text-xs text-[#0f172a]'>{ person.speakerPosition }</p>
+              </div>
+            )
+          })}
       </div>
     </div>
   )

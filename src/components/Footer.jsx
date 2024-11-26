@@ -36,14 +36,14 @@ const Footer = () => {
           </div>
         </div>
         {/* copyright and social links */}
-        <div className='h-[80px] flex s:flex-col sm:flex-col justify-between md:items-center lg:items-center xl:items-center s:gap-2 sm:gap-2 border-t border-[#0f1729]'>
+        <div className='h-[80px] flex sm:flex-col justify-between md:items-center lg:items-center xl:items-center s:gap-2 sm:gap-2 border-t border-[#0f1729]'>
           {/* footer image */}
           <div>
             <img src={image} alt="Footer Image" />
           </div>
-          <div className='flex s:flex-col sm:flex-col md:items-center lg:items-center xl:items-center s:gap-3 sm:gap-5 md:gap-16 lg:gap-20 xl:gap-20'>
+          <div className='flex sm:flex-col md:items-center md:ml-10 lg:items-center xl:items-center s:gap-3 sm:gap-5 md:gap-16 lg:gap-20 xl:gap-20'>
             {/* copyright */}
-            <p>Maina and kids children foundation &copy; 2024. all rights reserved.</p>
+            <p className='md:text-sm md:whitespace-nowrap'>Maina and kids children foundation &copy; 2024. all rights reserved.</p>
             {/* social links */}
             <div className='flex text-xl gap-4 s:mb-4 sm:mb-4'>
               <a href="" className='hover:text-[#0f172a]' title='Youtube'><FaYoutube/></a>
