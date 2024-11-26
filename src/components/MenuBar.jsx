@@ -10,7 +10,7 @@ const MenuBar = () => {
   return (
     <div>
         { isClicked && (
-            <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-20'>
+            <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-30'>
                 <section className={`${isClicked ? 'translate-x-0' : 'translate-x-[-100%]'} h-screen w-full fixed top-0 right-0 bg-[#f7faf9] z-30 transition-all duration-200 transform shadow-2xl rounded-md`}>
                     <div className='relative'>
                         {/* closing icon on menu bar */}
@@ -21,9 +21,9 @@ const MenuBar = () => {
                         </div>
                         {/* links */}
                         <ul className='flex flex-col gap-6 justify-center text-[#453838] font-semibold text-[20px] capitalize mt-[110px] mx-10'>
-                            <li onClick={() => navigate('/about')}>about us</li>
-                            <li onClick={() => navigate('/girl-child')}>girl child</li>
-                            <li onClick={() => navigate('/')}>home</li>
+                            <li onClick={() => {navigate('/about'), handleMenuClose()}} className='hover:text-[#326699] '>about us</li>
+                            <li onClick={() => {navigate('/girl-child'), handleMenuClose()}} className='hover:text-[#326699] '>girl child</li>
+                            <li onClick={() => {navigate('/'), handleMenuClose()}} className='hover:text-[#326699] '>home</li>
                         </ul>
                         {/* buttons */}
                         <div className='flex flex-col w-full items-center gap-6 my-10'>

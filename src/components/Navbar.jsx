@@ -39,7 +39,7 @@ const Navbar = () => {
   });
   return (
     // based on how far a user is in a page, the navbar changes
-    <nav className={`${isScrolled ? 'bg-white' : navbarBg } transition-all duration-300 h-[129px] flex justify-between items-center s:px-[5px] sm:px-[20px] md:px-[60px] lg:px-[80px] xl:px-[100px] sticky top-0 z-10`}>
+    <nav className={`${isScrolled ? 'bg-white' : navbarBg } transition-all duration-300 h-[120px] flex justify-between items-center s:px-[5px] sm:px-[20px] md:px-[60px] lg:px-[80px] xl:px-[100px] 2xl:px-[100px] sticky top-0 z-10`}>
       {/* image */}
       <div>
         <img src={ Logo } alt="Maina and Kids Foundation" className={`${isActive ? 'hidden' : 'block'} s:w-[50px] s:h-[50px] sm:w-[65px] s:h-[65px] md:w-[75px] md:h-[75px] lg:w-[80px] lg:h-[80px] xl:w-[90px] xl:h-[90px] object-cover`} />
