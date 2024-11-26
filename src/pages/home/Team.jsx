@@ -54,7 +54,7 @@ const Team = () => {
     }
   ]
   return (
-    <div className='flex justify-center items-center flex-col xl:p-[100px]'>
+    <div id='team' className='flex justify-center items-center flex-col xl:p-[100px]'>
       {/* heading */}
       <h3 className='sm:text-[30px] sm:text-center sm:whitespace-nowrap md:text-[55px] md:text-center text-[56px] font-extrabold text-[#0F172A]'>Meet the team</h3>
       {/* sub text only on mobile */}

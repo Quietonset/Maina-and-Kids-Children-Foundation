@@ -35,7 +35,7 @@ const Objectives = () => {
 
 
   return (
-    <div className='flex justify-center items-center flex-col sm:px-[16px] sm:py-[25px] md:p-[35px] lg:p-[60px] xl:p-[100px] 2xl:p-[100px] gap-[10px]'>
+    <div id='objectives' className='flex justify-center items-center flex-col sm:px-[16px] sm:py-[25px] md:p-[35px] lg:p-[60px] xl:p-[100px] 2xl:p-[100px] gap-[10px]'>
       {/* subtitle */}
       <p className='text-[#336699] font-semibold text-xl capitalize font-montserrat'>objectives</p>
       {/* bigger text */}

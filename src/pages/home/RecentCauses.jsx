@@ -36,7 +36,7 @@ const RecentCauses = () => {
 
 
   return (
-    <div className='flex justify-center items-center flex-col sm:px-[20px] sm:py-[25px] md:p-[35px] lg:p-[60px] xl:p-[100px] 2xl:p-[100px]'>
+    <div id='recentCauses' className='flex justify-center items-center flex-col sm:px-[20px] sm:py-[25px] md:p-[35px] lg:p-[60px] xl:p-[100px] 2xl:p-[100px]'>
       {/* subtitle */}
       <p className='font-bold sm:text-base text-xl uppercase tracking-widest text-[#336699]'>a glimpse into</p>
       {/* bigger text */}
