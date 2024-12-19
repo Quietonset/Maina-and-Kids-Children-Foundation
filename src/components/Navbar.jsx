@@ -13,7 +13,12 @@ const Navbar = () => {
 
   // setting state for dropdown menu
   const [ isDropdownHovered, setIsDropDownHovered ] = useState(false);
+  // Set drop down to only be visible in home page
+  const [isVisible, setIsVisible] = useState(false)
+ 
+ 
 
+ 
   // function to handle dropdown state
   const handleNavHover = () => {
     setIsDropDownHovered(!isDropdownHovered)
@@ -28,6 +33,15 @@ const Navbar = () => {
   if (location.pathname === '/') {
     navbarBg = "bg-[url('/assets/hero-bg.png')]"
   }
+
+   useEffect (() => {
+    if (location.pathname === "/"){
+      setIsVisible(true)
+    } else {
+      setIsVisible(false)
+    }
+  },[location])
+
 
   // setting state for scrolling on window
   const [ isScrolled, setIsScrolled ] = useState(false);
@@ -60,7 +74,7 @@ const Navbar = () => {
         >
           <span>causes</span>
           <span>{isDropdownHovered ? <IoIosArrowUp/> : <IoIosArrowDown/> }</span>
-          {isDropdownHovered && (
+          {isDropdownHovered && isVisible &&(
             <div className='absolute top-10 bg-white text-gray-600 rounded-lg h-fit w-[150px] p-5 shadow-lg md:text-sm'>
               <ul>
                 <li className='hover:cursor-pointer hover:text-[#453838] border-b py-1.5'>

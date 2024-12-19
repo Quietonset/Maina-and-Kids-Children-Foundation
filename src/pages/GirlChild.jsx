@@ -1,13 +1,13 @@
 import React from 'react'
-import Group from "../../public/assets/Rectangle 27.png"
-import Education from "../../public/assets/Rectangle 23.png"
-import Health from "../../public/assets/Rectangle 25.png"
-import Skill from "../../public/assets/Rectangle 26.png"
-import Confidence from "../../public/assets/Rectangle 24.png"
-import Sister from "../../public/assets/Picture.png"
-import Pad from "../../public/assets/Pad.png"
-import Policy from "../../public/assets/Policy.png"
-import Line from "../../public/assets/Line 2.png"
+import Group from "/assets/Rectangle 27.png"
+import Education from "/assets/Rectangle 23.png"
+import Health from "/assets/Rectangle 25.png"
+import Skill from "/assets/Rectangle 26.png"
+import Confidence from "/assets/Rectangle 24.png"
+import Sister from "/assets/Picture.png"
+import Pad from "/assets/Pad.png"
+import Policy from "/assets/Policy.png"
+import Line from "/assets/Line 2.png"
 import Button from '../components/Button'
 
 
