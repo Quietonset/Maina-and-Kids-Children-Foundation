@@ -27,7 +27,7 @@ const GirlChild = () => {
         <img src={Group} alt="Group image" />
         <div className='flex gap-[24px] items-center'>
           <img className='' src={Line} alt="" />
-          <p className='text-[18px]'>The Girl Child Program was lunched to carry out awareness activities among young girls in rural communities in the Northern part of Nigeria on sanitary hygiene and bring about possible solution to ending period poverty.</p>
+          <p className='text-[18px]'>The Girl Child Program was launched to carry out awareness activities among young girls in rural communities in the Northern part of Nigeria on sanitary hygiene and bring about possible solution to ending period poverty.</p>
         </div>
       </div>
      </div>
