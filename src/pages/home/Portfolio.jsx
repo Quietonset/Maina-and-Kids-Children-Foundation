@@ -7,7 +7,7 @@ const Portfolio = () => {
       {/* subtitle */}
       <p className='font-bold sm:text-base text-xl uppercase tracking-widest text-[#336699]'>portfolio</p>
       {/* bigger text */}
-      <h3 className='sm:text-[32px] sm:text-center md:text-[55px] md:text-center text-[56px] font-extrabold text-[#0F172A]'>View our work through the lense <br /> of a camera</h3>
+      <h3 className='sm:text-[32px] text-center md:text-[55px] text-[56px] font-extrabold text-[#0F172A]'>View our work through the lense <br /> of a camera</h3>
       <SwiperComponent/>
     </div>
   )

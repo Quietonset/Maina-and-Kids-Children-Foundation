@@ -39,7 +39,7 @@ const Objectives = () => {
       {/* subtitle */}
       <p className='text-[#336699] font-semibold text-xl capitalize font-montserrat'>objectives</p>
       {/* bigger text */}
-      <h3 className='sm:text-[32px] sm:text-center md:text-[55px] md:text-center text-[56px] font-extrabold text-[#0F172A]'>Giving Little Children Chances Through</h3>
+      <h3 className='sm:text-[32px] text-center md:text-[55px] text-[56px] font-extrabold text-[#0F172A]'>Giving Little Children Chances Through</h3>
       {/* sub text only on mobile */}
       <p className='hidden sm:block text-center text-[#0F172A]'>Our organization caters to children and girls, we have programs that are intended for them.</p>
       {/* grid box */}
