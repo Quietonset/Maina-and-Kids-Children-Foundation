@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import MenuBar from '../components/MenuBar'
 import StringText from '../components/10th Anniversary/StringText'
-import FloatingAnniversaryBox from '../components/10th Anniversary/FloatingAnniversaryBox'
+// import FloatingAnniversaryBox from '../components/10th Anniversary/FloatingAnniversaryBox'
 import AnniversaryModal from '../components/10th Anniversary/AnniversaryModal'
 
 const Root = () => {
@@ -15,7 +15,7 @@ const Root = () => {
         <Outlet/>
         <AnniversaryModal/>
         <StringText/>
-        <FloatingAnniversaryBox/>
+        {/* <FloatingAnniversaryBox/> */}
         <Footer/>
     </div>
   )
